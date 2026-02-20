@@ -17,6 +17,8 @@ export default function App() {
   const nextSlide = () => setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
+  const FB_URL = "https://www.facebook.com/HorsesForHeroesUnited/";
+
   return (
     <div id="top" className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#1a2e1a] text-white p-4 rounded-md z-[100]">
@@ -28,18 +30,31 @@ export default function App() {
           <a href="#top" className="focus:outline-none focus:ring-2 focus:ring-[#1a2e1a] rounded">
             <h1 className="font-serif text-xl font-bold tracking-tight uppercase">Horses for Heroes United</h1>
           </a>
-          <nav aria-label="Main Navigation" className="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest">
-            <a href="#about" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">About Us</a>
-            <a href="#approach" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Our Approach</a>
-            <a href="#program" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Program</a>
-            <a href="#volunteer" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
-            <a href="#contact" className="hover:opacity-60 border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
-          </nav>
+          
+          <div className="flex items-center gap-4 md:gap-8">
+            <nav aria-label="Main Navigation" className="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest">
+              <a href="#about" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">About Us</a>
+              <a href="#approach" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Our Approach</a>
+              <a href="#program" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Program</a>
+              <a href="#volunteer" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
+              <a href="#contact" className="hover:opacity-60 border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
+            </nav>
+
+            {/* Header Facebook Link Added Here */}
+            <a 
+              href={FB_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Follow us on Facebook"
+              className="p-2 bg-[#1a2e1a] text-white rounded-full hover:bg-[#1a2e1a]/80 transition-colors flex items-center justify-center"
+            >
+              <Facebook size={18} />
+            </a>
+          </div>
         </div>
       </header>
 
       <main id="main-content">
-        {/* Hero Section */}
         <section className="relative pt-32 pb-8 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-[#1a2e1a]">
@@ -53,7 +68,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Branch Logos */}
         <section className="pb-16 px-6" aria-label="Military Service Branches Supported">
           <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-90">
             <img src="/army.jpeg" alt="U.S. Army emblem" className="h-10 md:h-14 w-auto object-contain" />
@@ -65,24 +79,18 @@ export default function App() {
           </div>
         </section>
 
-        {/* Cohort Image */}
         <section className="max-w-6xl mx-auto px-6 mb-24">
           <figure className="relative aspect-[21/9] bg-[#1a2e1a]/10 rounded-2xl overflow-hidden border border-[#1a2e1a]/10 shadow-2xl">
-            <img src="/cohort-one.jpg" alt="The inaugural 2025 cohort of Veterans and Sheriff's Posse members with horses at Riley Arena." className="w-full h-full object-cover" />
+            <img src="/cohort-one.jpg" alt="The inaugural 2025 cohort" className="w-full h-full object-cover" />
           </figure>
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* Mission Section: Verified .jpeg Path */}
         <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5 order-2 md:order-1">
               <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-white/5">
-                <img 
-                  src="/us-flag.jpeg" 
-                  alt="U.S. Flag waving against a bright blue sky" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/us-flag.jpeg" alt="U.S. Flag" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/60 to-transparent"></div>
               </div>
             </div>
@@ -106,7 +114,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Our Approach */}
         <section id="approach" className="py-24 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div className="bg-[#1a2e1a]/5 p-12 rounded-2xl border border-[#1a2e1a]/10">
@@ -144,7 +151,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Program Section */}
         <section id="program" className="py-24 px-6 bg-[#1a2e1a]/5 border-y border-[#1a2e1a]/10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -172,7 +178,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Testimonial Carousel */}
         <section className="py-24 px-6 bg-white overflow-hidden" aria-labelledby="testimonial-heading">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -207,14 +212,13 @@ export default function App() {
           </div>
         </section>
 
-        {/* Volunteer Section */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <h2 className="font-serif text-4xl mb-6 italic text-[#1a2e1a]">Join the Coalition</h2>
                 <p className="text-lg opacity-80 mb-8 font-serif italic text-[#1a2e1a]">"Help us build the next cohort."</p>
-                <p className="text-[#1a2e1a]/80 mb-6">We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. While all help is welcome, we prioritize:</p>
+                <p className="text-[#1a2e1a]/80 mb-6">We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>.</p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous participants encouraged)</span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>program-suitable horse</strong></span></li>
@@ -228,30 +232,27 @@ export default function App() {
                   <div><label htmlFor="email-address" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Email</label><input id="email-address" type="email" name="email" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" /></div>
                   <div><label htmlFor="phone-number" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Phone</label><input id="phone-number" type="tel" name="phone" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" /></div>
                 </div>
-                <div><label htmlFor="exp-notes" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Experience</label><textarea id="exp-notes" name="experience" placeholder="How can you help us build?" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]"></textarea></div>
+                <div><label htmlFor="exp-notes" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Experience</label><textarea id="exp-notes" name="experience" placeholder="How can you help?" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]"></textarea></div>
                 <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity focus:ring-4 focus:ring-[#1a2e1a]/40"><Send size={16} aria-hidden="true" /> Submit Application</button>
               </form>
             </div>
           </div>
         </section>
 
-        {/* Community & Partners */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
-            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light text-center">
-              We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
-            </p>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light text-center"> We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>. </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-16">
               <div className="flex flex-col items-center gap-4">
-                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse logo" className="h-32 md:h-44 w-auto object-contain" />
+                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse" className="h-32 md:h-44 w-auto object-contain" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 text-[#1a2e1a]">Operational Host</span>
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block" aria-hidden="true"></div>
               <div className="flex flex-col items-center gap-4">
-                <img src="/valogo.svg" alt="U.S. Department of Veterans Affairs logo" className="h-32 md:h-44 w-auto object-contain" />
+                <img src="/valogo.svg" alt="VA" className="h-32 md:h-44 w-auto object-contain" />
                 <div className="flex flex-col items-center max-w-[320px]">
-                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight text-center">North Bend VA Suicide Prevention Community Engagement Coordinator, Roseburg VA</span>
+                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight text-center">North Bend VA Community Engagement Coordinator, Roseburg VA</span>
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 text-[#1a2e1a]">Community Partner</span>
                 </div>
               </div>
@@ -259,34 +260,35 @@ export default function App() {
           </div>
         </section>
 
-        {/* Updated Footer with Tax ID & Facebook */}
         <footer id="contact" className="py-20 px-6 border-t border-[#1a2e1a]/10 bg-white">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
               <h3 className="font-serif text-2xl mb-4 uppercase tracking-tighter text-[#1a2e1a]">Horses for Heroes United</h3>
               <p className="max-w-xs text-[#1a2e1a]/60 text-sm italic mb-6">"Built by the community, for our heroes."</p>
+              
+              {/* Bold Footer Facebook Link */}
               <a 
-                href="https://www.facebook.com/HorsesForHeroesUnited/" 
+                href={FB_URL} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1a2e1a] hover:opacity-60 transition-opacity"
+                className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1a2e1a] border-b-2 border-[#1a2e1a] pb-1 inline-block hover:opacity-50 transition-all"
               >
-                <Facebook size={18} /> Follow Our Journey
+                <Facebook size={20} className="fill-[#1a2e1a]" /> FOLLOW OUR JOURNEY
               </a>
             </div>
             
             <div className="text-center md:text-left">
               <p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50 text-[#1a2e1a]">Non-Profit Information</p>
-              <p className="text-[#1a2e1a]/80 text-sm font-serif leading-relaxed">
-                Coos County Mounted Sheriffs Posse<br />
-                501(c)(3) Non-Profit<br />
-                Tax ID: 93-0966073
-              </p>
+              <div className="text-[#1a2e1a] text-sm font-serif leading-relaxed">
+                <p className="font-bold">Coos County Mounted Sheriffs Posse</p>
+                <p>501(c)(3) Non-Profit</p>
+                <p>Tax ID: 93-0966073</p>
+              </div>
             </div>
 
             <div>
               <p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50 text-[#1a2e1a]">Location</p>
-              <p className="text-[#1a2e1a]/80 text-sm font-serif">North Bend, Oregon</p>
+              <p className="text-[#1a2e1a] text-sm font-serif font-bold">North Bend, Oregon</p>
             </div>
           </div>
           <div className="max-w-7xl mx-auto text-center mt-16 pt-8 border-t border-[#1a2e1a]/5 text-[#1a2e1a]">
