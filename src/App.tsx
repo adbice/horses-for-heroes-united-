@@ -224,6 +224,7 @@ export default function App() {
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous participants encouraged)</span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>program-suitable horse</strong></span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Donations</strong> and Community Resource Support</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with equine experience/span></li>
                 </ul>
               </div>
 
