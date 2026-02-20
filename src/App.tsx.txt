@@ -1,0 +1,44 @@
+import React from 'react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 w-full bg-[#FDFCF8]/90 backdrop-blur-sm border-b border-[#1a2e1a]/10">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <h1 className="font-serif text-xl font-bold tracking-tight">HORSES FOR HEROES UNITED</h1>
+          <nav className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#science" className="hover:opacity-60 transition-opacity">Science & Soul</a>
+            <a href="#program" className="hover:opacity-60 transition-opacity">Program</a>
+            <a href="#partners" className="hover:opacity-60 transition-opacity">Partners</a>
+            <a href="#contact" className="hover:opacity-60 transition-opacity">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <main>
+        <section className="relative pt-32 pb-20 px-6 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
+              Healing Through <br />
+              <span className="italic">Intentional Partnership.</span>
+            </h2>
+            <p className="text-lg md:text-xl mb-10 text-[#1a2e1a]/80 max-w-2xl mx-auto leading-relaxed">
+              A specialized wellness initiative for Veterans in North Bend, Oregon, 
+              pairing human courage with equine connection.
+            </p>
+            <button className="bg-[#1a2e1a] text-[#FDFCF8] px-8 py-4 rounded-full font-medium hover:bg-[#2a452a] transition-colors shadow-lg">
+              Explore the Program
+            </button>
+          </div>
+        </section>
+
+        {/* Placeholder for content sections */}
+        <section id="science" className="py-20 border-t border-[#1a2e1a]/10">
+           <p className="text-center italic opacity-40 text-sm">Phase 2 Content Will Go Here</p>
+        </section>
+      </main>
+    </div>
+  );
+}
