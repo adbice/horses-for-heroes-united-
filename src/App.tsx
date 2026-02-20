@@ -249,8 +249,8 @@ export default function App() {
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block"></div>
               <div className="flex flex-col items-center gap-4">
-                 <div className="h-32 md:h-44 flex items-center justify-center italic text-[#1a2e1a]/40 font-serif text-2xl uppercase tracking-tighter">North Bend VA</div>
-                 <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
+                <img src="/valogo.svg" alt="North Bend VA" className="h-32 md:h-44 w-auto object-contain" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
               </div>
             </div>
           </div>
