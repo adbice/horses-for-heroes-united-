@@ -76,11 +76,11 @@ export default function App() {
         {/* Mission Statement Section: Side-by-Side Flag Accent */}
         <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            {/* Flag Image Column - Matches us-flag.jpg in your public folder */}
+            {/* Flag Image Column - Matches us-flag.jpeg extension in your public folder */}
             <div className="md:col-span-5 order-2 md:order-1">
               <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-white/5">
                 <img 
-                  src="/us-flag.jpg" 
+                  src="/us-flag.jpeg" 
                   alt="U.S. Flag waving against a bright blue sky" 
                   className="w-full h-full object-cover"
                 />
@@ -96,13 +96,11 @@ export default function App() {
                   "To improve the emotional well-being and quality of life for Veterans through intentional equine partnerships and community-based coalitions."
                 </p>
               </div>
-              
               <div className="pt-8 border-t border-white/20">
                 <p className="text-xl md:text-2xl font-light tracking-wide">
                   We are <span className="font-bold border-b-2 border-white/40 pb-1">built by the community, for our heroes.</span>
                 </p>
               </div>
-
               <p className="text-lg opacity-80 leading-relaxed">
                 We provide a safe environment to reconnect with oneself and a community that understands the journey. We exist because too many Veterans continue to carry the invisible impacts of service.
               </p>
@@ -189,7 +187,7 @@ export default function App() {
                 <article>
                   <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]">"{testimonials[currentSlide].text}"</p>
                   <div className="h-px w-12 bg-[#1a2e1a]/20 mx-auto mb-6" aria-hidden="true"></div>
-                  <footer className="font-bold uppercase tracking-widest text-xs text-[#1a2e1a]">— {testimonials[currentSlide].name}, Cohort 2025</footer>
+                  <footer className="font-bold uppercase tracking-widest text-xs text-[#1a2e1a]">{"— " + testimonials[currentSlide].name + ", Cohort 2025"}</footer>
                 </article>
               </div>
               <div className="absolute inset-y-0 left-0 flex items-center">
@@ -204,14 +202,14 @@ export default function App() {
               </div>
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Slide selection">
                 {testimonials.map((_, idx) => (
-                  <button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />
+                  <button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={"Go to testimonial " + (idx + 1)} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Volunteer Section */}
+        {/* Volunteer Section - Verified Content */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -240,7 +238,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Community & Partners */}
+        {/* Community & Partners - Verified VA Title */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
