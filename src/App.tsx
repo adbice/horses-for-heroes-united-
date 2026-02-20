@@ -20,7 +20,7 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-16 px-6 text-center">
+        <section className="relative pt-32 pb-8 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
               Healing Through <br />
@@ -30,6 +30,18 @@ export default function App() {
               A community-based coalition improving the emotional well-being and quality of life for Veterans across 
               <strong> Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
             </p>
+          </div>
+        </section>
+
+        {/* Military Branch Logos */}
+        <section className="pb-16 px-6">
+          <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-90">
+            <img src="/army.jpeg" alt="U.S. Army" className="h-10 md:h-14 w-auto object-contain" />
+            <img src="/marines.jpeg" alt="U.S. Marine Corps" className="h-10 md:h-14 w-auto object-contain" />
+            <img src="/navy.jpeg" alt="U.S. Navy" className="h-10 md:h-14 w-auto object-contain" />
+            <img src="/airforce.jpeg" alt="U.S. Air Force" className="h-10 md:h-14 w-auto object-contain" />
+            <img src="/coastguard.jpeg" alt="U.S. Coast Guard" className="h-10 md:h-14 w-auto object-contain" />
+            <img src="/spaceforce.jpeg" alt="U.S. Space Force" className="h-10 md:h-14 w-auto object-contain" />
           </div>
         </section>
 
@@ -170,9 +182,6 @@ export default function App() {
                     <span>Community members for logistics and outreach</span>
                   </li>
                 </ul>
-                <p className="text-sm italic opacity-60">
-                  Note: Sessions primarily run during our July–August Summer Schedule.
-                </p>
               </div>
 
               {/* Formspree Form */}
@@ -214,7 +223,7 @@ export default function App() {
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest mb-2">Experience & Suitability</label>
-                  <textarea name="experience" placeholder="Describe your horse handling experience or details about your horse..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
+                  <textarea name="experience" placeholder="Describe your experience or horse suitability..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
                   <Send size={16} /> Send Inquiry
@@ -226,11 +235,22 @@ export default function App() {
 
         {/* Community & Partners */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8]">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="font-serif text-4xl italic">A Community Coalition</h2>
-            <p className="text-xl leading-relaxed">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-4xl mb-8 italic">A Community Coalition</h2>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16">
               We operate through radical collaboration. Strengthened by the <strong>North Bend VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
             </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-16">
+              <div className="flex flex-col items-center gap-4">
+                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse" className="h-32 md:h-44 w-auto object-contain" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Operational Host</span>
+              </div>
+              <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block"></div>
+              <div className="flex flex-col items-center gap-4">
+                 <div className="h-32 md:h-44 flex items-center justify-center italic text-[#1a2e1a]/40 font-serif text-2xl">North Bend VA</div>
+                 <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
+              </div>
+            </div>
           </div>
         </section>
 
