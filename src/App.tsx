@@ -155,11 +155,15 @@ export default function App() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span><strong>Veterans</strong> looking to mentor peers</span>
+                    <span><strong>Veterans</strong> (Previous Cohort participants preferred)</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span>Individuals with <strong>Horse Handling Experience</strong></span>
+                    <span>Individuals with a <strong>horse suitable for the program</strong></span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
+                    <span>Individuals with <strong>horse handling experience</strong></span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
@@ -187,16 +191,30 @@ export default function App() {
                     <input type="email" name="email" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
                   </div>
                   <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Phone Number</label>
+                    <input type="tel" name="phone" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
                     <label className="block text-xs font-bold uppercase tracking-widest mb-2">Veteran Status</label>
                     <select name="veteran_status" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]">
                       <option value="no">Non-Veteran</option>
                       <option value="yes">Veteran</option>
+                      <option value="previous-cohort">Previous Cohort Participant</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Own a Suitable Horse?</label>
+                    <select name="has_horse" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]">
+                      <option value="no">No</option>
+                      <option value="yes">Yes</option>
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Equine Experience</label>
-                  <textarea name="experience" placeholder="Briefly describe your comfort level with horses..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
+                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Experience & Suitability</label>
+                  <textarea name="experience" placeholder="Describe your horse handling experience or details about your horse..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
                   <Send size={16} /> Send Inquiry
