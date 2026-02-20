@@ -19,22 +19,21 @@ export default function App() {
 
   return (
     <div id="top" className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
-      {/* Skip to Content */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#1a2e1a] text-white p-4 rounded-md z-[100]">
         Skip to main content
       </a>
 
       <header className="sticky top-0 z-50 w-full bg-[#FDFCF8]/90 backdrop-blur-sm border-b border-[#1a2e1a]/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a href="#top" className="hover:opacity-70 transition-opacity cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1a2e1a] rounded">
+          <a href="#top" className="focus:outline-none focus:ring-2 focus:ring-[#1a2e1a] rounded">
             <h1 className="font-serif text-xl font-bold tracking-tight uppercase">Horses for Heroes United</h1>
           </a>
           <nav aria-label="Main Navigation" className="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest">
-            <a href="#about" className="hover:opacity-60 transition-opacity focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">About Us</a>
-            <a href="#approach" className="hover:opacity-60 transition-opacity focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Our Approach</a>
-            <a href="#program" className="hover:opacity-60 transition-opacity focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Program</a>
-            <a href="#volunteer" className="hover:opacity-60 transition-opacity focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
-            <a href="#contact" className="hover:opacity-60 transition-opacity border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
+            <a href="#about" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">About Us</a>
+            <a href="#approach" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Our Approach</a>
+            <a href="#program" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Program</a>
+            <a href="#volunteer" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
+            <a href="#contact" className="hover:opacity-60 border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
           </nav>
         </div>
       </header>
@@ -74,12 +73,20 @@ export default function App() {
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* About Us */}
-        <section id="about" className="py-24 px-6 bg-white/50 border-y border-[#1a2e1a]/5">
-          <div className="max-w-4xl mx-auto space-y-12 text-center">
-            <h3 className="font-serif text-4xl italic">About Us</h3>
-            <p className="text-xl leading-relaxed opacity-90">
-              We exist because too many Veterans continue to carry the invisible impacts of service—chronic stress, isolation, and disrupted sleep. We provide a safe, supportive environment where Veterans can reconnect with themselves and a community that understands their journey.
+        {/* Mission Statement Section - Elevated "Built By" messaging */}
+        <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8] overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center space-y-10">
+            <h3 className="font-serif text-2xl uppercase tracking-[0.3em] opacity-60">Our Mission</h3>
+            <p className="text-3xl md:text-5xl font-serif leading-tight italic">
+              "To improve the emotional well-being and quality of life for Veterans through intentional equine partnerships and community-based coalitions."
+            </p>
+            <div className="pt-10 border-t border-white/20">
+              <p className="text-xl md:text-2xl font-light tracking-wide">
+                We are <span className="font-bold border-b-2 border-white/40 pb-1">built by the community, for our heroes.</span>
+              </p>
+            </div>
+            <p className="text-lg opacity-80 max-w-2xl mx-auto leading-relaxed pt-6">
+              We exist because too many Veterans continue to carry the invisible impacts of service. We provide a safe environment to reconnect with oneself and a community that understands the journey.
             </p>
           </div>
         </section>
@@ -87,12 +94,12 @@ export default function App() {
         {/* Our Approach */}
         <section id="approach" className="py-24 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div className="bg-[#1a2e1a] text-[#FDFCF8] p-12 rounded-2xl shadow-xl">
-              <h3 className="font-serif text-4xl mb-6">Our Approach</h3>
+            <div className="bg-[#1a2e1a]/5 p-12 rounded-2xl border border-[#1a2e1a]/10">
+              <h3 className="font-serif text-4xl mb-6 italic">Our Approach</h3>
               <p className="text-lg leading-relaxed mb-6">
                 Our program is grounded in relationship-based interactions. In the quiet of the arena, a horse turning toward a Veteran with calm curiosity becomes the starting point for meaningful change.
               </p>
-              <p className="text-sm border-t border-white/20 pt-6 opacity-80 italic">
+              <p className="text-sm border-t border-[#1a2e1a]/10 pt-6 opacity-70 italic">
                 Note: We do not offer clinical therapy. We provide a complementary wellness experience that supports Veterans in ways traditional services may not always reach.
               </p>
             </div>
@@ -100,21 +107,21 @@ export default function App() {
               <div className="flex gap-6">
                 <Shield className="shrink-0 text-[#1a2e1a]" aria-hidden="true" />
                 <div>
-                  <h4 className="font-bold mb-2">Safety & Dignity</h4>
+                  <h4 className="font-bold mb-2 uppercase tracking-widest text-xs">Safety & Dignity</h4>
                   <p className="opacity-70">Guided by trained facilitators who prioritize individualized support.</p>
                 </div>
               </div>
               <div className="flex gap-6">
                 <Heart className="shrink-0 text-[#1a2e1a]" aria-hidden="true" />
                 <div>
-                  <h4 className="font-bold mb-2">Non-Verbal Connection</h4>
+                  <h4 className="font-bold mb-2 uppercase tracking-widest text-xs">Non-Verbal Connection</h4>
                   <p className="opacity-70">Helping Veterans regulate stress and experience a renewed sense of confidence.</p>
                 </div>
               </div>
               <div className="flex gap-6">
                 <Users className="shrink-0 text-[#1a2e1a]" aria-hidden="true" />
                 <div>
-                  <h4 className="font-bold mb-2">Community Connection</h4>
+                  <h4 className="font-bold mb-2 uppercase tracking-widest text-xs">Community Connection</h4>
                   <p className="opacity-70">Veterans report a greater sense of belonging and improved emotional well-being.</p>
                 </div>
               </div>
@@ -123,11 +130,11 @@ export default function App() {
         </section>
 
         {/* Program Section */}
-        <section id="program" className="py-24 px-6 bg-[#1a2e1a]/5">
+        <section id="program" className="py-24 px-6 bg-[#1a2e1a]/5 border-y border-[#1a2e1a]/10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="font-serif text-5xl mb-6">The Equine Experience</h2>
-              <p className="uppercase tracking-widest text-sm font-bold opacity-60">A Free 8-Week Wellness Initiative</p>
+              <p className="uppercase tracking-widest text-xs font-bold opacity-60">A Free 8-Week Wellness Initiative</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-8 bg-white border border-[#1a2e1a]/10 rounded-xl">
@@ -140,7 +147,7 @@ export default function App() {
                 <h4 className="font-serif text-2xl mb-4">Regional Reach</h4>
                 <p className="opacity-80">Serving the Veteran communities of Coos County and Western Douglas County, Oregon.</p>
               </div>
-              <a href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" target="_blank" rel="noopener noreferrer" className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl hover:scale-[1.02] transition-transform group cursor-pointer focus:ring-4 focus:ring-[#1a2e1a]/30">
+              <a href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" target="_blank" rel="noopener noreferrer" className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl hover:scale-[1.02] transition-transform group focus:ring-4 focus:ring-[#1a2e1a]/30">
                 <BookOpen className="mb-4 group-hover:text-white/80 transition-colors" aria-hidden="true" />
                 <h4 className="font-serif text-2xl mb-4">The Publication</h4>
                 <p className="text-sm opacity-80 leading-relaxed">100% of all proceeds fund our wellness sessions, ensuring Veterans participate at no cost.</p>
@@ -157,20 +164,15 @@ export default function App() {
               <h2 id="testimonial-heading" className="font-serif text-4xl mb-4 italic">Beyond the Arena</h2>
               <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#1a2e1a]/60">Reflections from the 2025 Inaugural Cohort</p>
             </div>
-            
             <div className="relative bg-[#FDFCF8] border border-[#1a2e1a]/10 rounded-3xl p-8 md:p-16 shadow-sm min-h-[420px] flex flex-col justify-center" role="region" aria-roledescription="carousel" aria-label="Veteran Testimonials">
               <Quote className="absolute top-8 left-8 opacity-5 text-[#1a2e1a]" size={80} aria-hidden="true" />
-              
               <div className="relative z-10 text-center px-4 md:px-12 transition-all duration-500" aria-live="polite" aria-atomic="true">
                 <article>
-                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]">
-                    "{testimonials[currentSlide].text}"
-                  </p>
+                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]">"{testimonials[currentSlide].text}"</p>
                   <div className="h-px w-12 bg-[#1a2e1a]/20 mx-auto mb-6" aria-hidden="true"></div>
-                  <footer className="font-bold uppercase tracking-widest text-sm">— {testimonials[currentSlide].name}, Cohort 2025</footer>
+                  <footer className="font-bold uppercase tracking-widest text-xs">— {testimonials[currentSlide].name}, Cohort 2025</footer>
                 </article>
               </div>
-
               <div className="absolute inset-y-0 left-0 flex items-center">
                 <button onClick={prevSlide} aria-label="Previous Testimonial" className="p-4 hover:bg-[#1a2e1a]/5 transition-colors focus:ring-2 focus:ring-[#1a2e1a] rounded-full">
                   <ChevronLeft size={32} />
@@ -181,17 +183,9 @@ export default function App() {
                   <ChevronRight size={32} />
                 </button>
               </div>
-
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Slide selection">
                 {testimonials.map((_, idx) => (
-                  <button 
-                    key={idx} 
-                    role="tab"
-                    aria-selected={currentSlide === idx}
-                    aria-label={`Go to testimonial ${idx + 1}`}
-                    onClick={() => setCurrentSlide(idx)} 
-                    className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} 
-                  />
+                  <button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />
                 ))}
               </div>
             </div>
@@ -199,77 +193,50 @@ export default function App() {
         </section>
 
         {/* Volunteer Section */}
-        <section id="volunteer" className="py-24 px-6 bg-white border-t border-[#1a2e1a]/5">
+        <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <h2 className="font-serif text-4xl mb-6 italic">Join the Coalition</h2>
-                <p className="text-lg opacity-80 mb-8">
-                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. While all help is welcome, we prioritize:
-                </p>
+                <p className="text-lg opacity-80 mb-8 font-serif italic text-[#1a2e1a]">"Help us build the next cohort."</p>
                 <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous Cohort participants preferred)</span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>horse suitable for the program</strong> (Subject to evaluation by the Posse)</span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with <strong>horse handling experience</strong></span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Community members for logistics and outreach</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous participants encouraged)</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>program-suitable horse</strong></span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Experienced <strong>horse handlers</strong></span></li>
                 </ul>
               </div>
-
-              <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-[#FDFCF8] p-8 rounded-xl border border-[#1a2e1a]/10 shadow-sm">
-                <div>
-                  <label htmlFor="full-name" className="block text-xs font-bold uppercase tracking-widest mb-2">Full Name</label>
-                  <input id="full-name" type="text" name="name" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" />
-                </div>
+              <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-white p-8 rounded-xl border border-[#1a2e1a]/10 shadow-lg">
+                <div><label htmlFor="full-name" className="block text-[10px] font-bold uppercase tracking-widest mb-2">Full Name</label><input id="full-name" type="text" name="name" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" /></div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email-address" className="block text-xs font-bold uppercase tracking-widest mb-2">Email</label>
-                    <input id="email-address" type="email" name="email" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" />
-                  </div>
-                  <div>
-                    <label htmlFor="phone-number" className="block text-xs font-bold uppercase tracking-widest mb-2">Phone</label>
-                    <input id="phone-number" type="tel" name="phone" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" />
-                  </div>
+                  <div><label htmlFor="email-address" className="block text-[10px] font-bold uppercase tracking-widest mb-2">Email</label><input id="email-address" type="email" name="email" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" /></div>
+                  <div><label htmlFor="phone-number" className="block text-[10px] font-bold uppercase tracking-widest mb-2">Phone</label><input id="phone-number" type="tel" name="phone" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]" /></div>
                 </div>
-                <div>
-                  <label htmlFor="vet-status" className="block text-xs font-bold uppercase tracking-widest mb-2">Veteran Status</label>
-                  <select id="vet-status" name="veteran_status" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]">
-                    <option value="no">Non-Veteran</option>
-                    <option value="yes">Veteran</option>
-                    <option value="previous-cohort">Previous Cohort Participant</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="exp-notes" className="block text-xs font-bold uppercase tracking-widest mb-2">Experience</label>
-                  <textarea id="exp-notes" name="experience" placeholder="Describe your experience..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a]"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity focus:ring-4 focus:ring-[#1a2e1a]/40">
-                  <Send size={16} aria-hidden="true" /> Send Inquiry
-                </button>
+                <div><label htmlFor="vet-status" className="block text-[10px] font-bold uppercase tracking-widest mb-2">Veteran Status</label><select id="vet-status" name="veteran_status" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a]"><option value="no">Non-Veteran</option><option value="yes">Veteran</option><option value="previous-cohort">Previous Cohort Participant</option></select></div>
+                <div><label htmlFor="exp-notes" className="block text-[10px] font-bold uppercase tracking-widest mb-2">Experience</label><textarea id="exp-notes" name="experience" placeholder="How can you help us build?" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a]"></textarea></div>
+                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity focus:ring-4 focus:ring-[#1a2e1a]/40"><Send size={16} aria-hidden="true" /> Submit Application</button>
               </form>
             </div>
           </div>
         </section>
 
         {/* Community & Partners */}
-        <section id="partners" className="py-24 px-6 bg-[#FDFCF8]">
+        <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-4xl mb-8 italic">A Community Coalition</h2>
-            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90">
+            <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light">
               We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-16">
               <div className="flex flex-col items-center gap-4">
                 <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse logo" className="h-32 md:h-44 w-auto object-contain" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-60">Operational Host</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50">Operational Host</span>
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block" aria-hidden="true"></div>
               <div className="flex flex-col items-center gap-4">
                 <img src="/valogo.svg" alt="U.S. Department of Veterans Affairs logo" className="h-32 md:h-44 w-auto object-contain" />
                 <div className="flex flex-col items-center max-w-[320px]">
-                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight">
-                    North Bend VA Suicide Prevention Community Engagement Coordinator, Roseburg VA
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-60">Community Partner</span>
+                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight text-center">North Bend VA Suicide Prevention Community Engagement Coordinator, Roseburg VA</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
                 </div>
               </div>
             </div>
@@ -277,19 +244,16 @@ export default function App() {
         </section>
 
         {/* Footer */}
-        <footer id="contact" className="py-20 px-6 border-t border-[#1a2e1a]/10 bg-[#FDFCF8]">
+        <footer id="contact" className="py-20 px-6 border-t border-[#1a2e1a]/10 bg-white">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
-              <h3 className="font-serif text-2xl mb-4 uppercase">Horses for Heroes United</h3>
-              <p className="max-w-xs text-[#1a2e1a]/70 text-sm">Improving the quality of life for Veterans across Coos and Western Douglas County, Oregon.</p>
+              <h3 className="font-serif text-2xl mb-4 uppercase tracking-tighter">Horses for Heroes United</h3>
+              <p className="max-w-xs text-[#1a2e1a]/60 text-sm italic">"Built by the community, for our heroes."</p>
             </div>
-            <div>
-              <p className="font-bold uppercase tracking-widest text-xs mb-4">Location</p>
-              <p className="text-[#1a2e1a]/80 text-sm">North Bend, Oregon</p>
-            </div>
+            <div><p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50">Location</p><p className="text-[#1a2e1a]/80 text-sm font-serif">North Bend, Oregon</p></div>
           </div>
           <div className="max-w-7xl mx-auto text-center mt-16 pt-8 border-t border-[#1a2e1a]/5">
-             <p className="text-[10px] uppercase tracking-widest opacity-40">© 2026 HORSES FOR HEROES UNITED. ALL RIGHTS RESERVED.</p>
+             <p className="text-[10px] uppercase tracking-widest opacity-30 font-bold">© 2026 HORSES FOR HEROES UNITED. ALL RIGHTS RESERVED.</p>
           </div>
         </footer>
       </main>
