@@ -27,7 +27,8 @@ export default function App() {
               <span className="italic">Intentional Partnership.</span>
             </h2>
             <p className="text-lg md:text-xl mb-10 text-[#1a2e1a]/80 max-w-3xl mx-auto leading-relaxed">
-              A community-based coalition improving the emotional well-being and quality of life for Veterans across <strong>Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
+              A community-based coalition improving the emotional well-being and quality of life for Veterans across 
+              <strong> Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
             </p>
           </div>
         </section>
@@ -35,21 +36,16 @@ export default function App() {
         {/* The Cohort Visual Anchor */}
         <section className="max-w-6xl mx-auto px-6 mb-24">
           <div className="relative aspect-[21/9] bg-[#1a2e1a]/10 rounded-2xl overflow-hidden border border-[#1a2e1a]/10 shadow-2xl">
-            {/* When you have the photo, place it in /public/cohort-one.jpg */}
             <img 
               src="/cohort-one.jpg" 
               alt="First cohort of Veterans with the Coos County Mounted Sheriff's Posse" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display='none'; }} 
             />
-            <div className="absolute inset-0 flex items-center justify-center text-[#1a2e1a]/20 italic">
-              [Image: First Cohort & Coos County Mounted Sheriff’s Posse]
-            </div>
           </div>
           <p className="mt-4 text-center text-sm italic opacity-60">The inaugural cohort alongside the Coos County Mounted Sheriff’s Posse.</p>
         </section>
 
-        {/* About Us & Vision */}
+        {/* About Us */}
         <section id="about" className="py-24 px-6 bg-white/50 border-y border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto space-y-12 text-center">
             <h3 className="font-serif text-4xl italic">About Us</h3>
@@ -123,14 +119,26 @@ export default function App() {
               <div className="p-8 bg-white border border-[#1a2e1a]/10 rounded-xl">
                 <MapPin className="mb-4 text-[#1a2e1a]" />
                 <h4 className="font-serif text-2xl mb-4">Regional Reach</h4>
-                <p className="opacity-80">Serving the Veteran communities of Coos County and Western Douglas County.</p>
+                <p className="opacity-80">Serving the Veteran communities of Coos County and Western Douglas County, Oregon.</p>
               </div>
-              <div className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl">
-                <BookOpen className="mb-4" />
+              
+              {/* Clickable Publication Card */}
+              <a 
+                href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl hover:scale-[1.02] transition-transform group cursor-pointer"
+              >
+                <BookOpen className="mb-4 group-hover:text-white/80 transition-colors" />
                 <h4 className="font-serif text-2xl mb-4">The Publication</h4>
-                <p className="opacity-90 italic">"Healing Through Equine Connection"</p>
-                <p className="mt-4 text-sm opacity-80 text-white">Documenting participant journeys and the impact of the coalition.</p>
-              </div>
+                <p className="opacity-90 italic mb-4">"Healing Through Equine Connection"</p>
+                <p className="text-sm opacity-80 leading-relaxed">
+                  A journey into the heart of the horse-human bond. 
+                  <strong> 100% of all proceeds </strong> fund our wellness sessions, 
+                  ensuring Veterans participate at no cost.
+                </p>
+                <p className="mt-6 text-xs font-bold uppercase tracking-widest border-b border-white/30 inline-block pb-1">Read the Story</p>
+              </a>
             </div>
           </div>
         </section>
@@ -142,24 +150,19 @@ export default function App() {
             <p className="text-xl leading-relaxed">
               We operate through radical collaboration. Strengthened by the <strong>North Bend VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
             </p>
-            <div className="flex flex-wrap justify-center gap-12 pt-8 opacity-40 grayscale pointer-events-none">
-               <span className="font-serif text-xl tracking-tighter">COOS COUNTY MOUNTED SHERIFF'S POSSE</span>
-               <span className="font-serif text-xl tracking-tighter">NORTH BEND VA</span>
-            </div>
           </div>
         </section>
 
-        {/* Contact Footer */}
+        {/* Footer */}
         <footer id="contact" className="py-20 px-6 bg-[#FDFCF8]">
           <div className="max-w-7xl mx-auto border-t border-[#1a2e1a]/20 pt-16 flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
               <h3 className="font-serif text-3xl mb-4 uppercase">Horses for Heroes United</h3>
-              <p className="max-w-sm opacity-70">Improving the quality of life for Veterans through equine-assisted wellness experiences.</p>
+              <p className="max-w-sm opacity-70">Improving the quality of life for Veterans across Coos and Western Douglas County, Oregon.</p>
             </div>
             <div className="space-y-4">
               <p className="font-bold uppercase tracking-widest text-xs">Engagement</p>
-              <p className="opacity-80 cursor-pointer hover:underline">Volunteer Opportunities</p>
-              <p className="opacity-80 cursor-pointer hover:underline">Support the Coalition</p>
+              <p className="opacity-80">Volunteer Opportunities (Coming Soon)</p>
             </div>
             <div>
               <p className="font-bold uppercase tracking-widest text-xs mb-2">Regional Hub</p>
