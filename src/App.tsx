@@ -1,7 +1,43 @@
-import React from 'react';
-import { BookOpen, Shield, Heart, Calendar, MapPin, Users, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { BookOpen, Shield, Heart, Calendar, MapPin, Users, Send, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 export default function App() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const testimonials = [
+    {
+      name: "Janice",
+      text: "This experience has given me something I didn’t know I was missing—and now, something to look forward to. I can’t wait to return next year as a peer support, to walk beside others as they discover what this journey can hold.",
+    },
+    {
+      name: "Linda",
+      text: "Being able to participate in Horses For Heroes has brought back other memories. I’ve been able to watch other people fall in love with that glorious four-legged creature, the horse. Riding cross-country might have ruined my knees, but being able to share this experience with my fellow veterans has helped seal up the cracks in my heart. I remember what it was like to look forward to a new day, and now I can stop freezing. I can make plans for the rest of my life.",
+    },
+    {
+      name: "Michelle",
+      text: "Participation in the Coos County Mounted Sheriff Posse, Horses of Heroes program has been transformative, providing me with a sense of purpose and healing through working with horses and other helpful heroes striving to make a positive difference.",
+    },
+    {
+      name: "Tiffany",
+      text: "The program helped me regain confidence in riding and reconnect socially. I’ve had tough critics in the past, and it made moving forward feel impossible. But the camaraderie and time spent with other veterans helped me feel less isolated. I felt part of something again.",
+    },
+    {
+      name: "Teresa",
+      text: "The Horses for Heroes program gave me an opportunity to not only be around the horses but to also meet with other veterans and their families who were also interested in learning to care for horses and riding. Would not trade my experience and I hope to continue with the program as a volunteer.",
+    },
+    {
+      name: "Tony",
+      text: "The horses make me feel safe. The trainers make me feel safe. I knew it was a safe program and a safe place. This time was a whole lot easier. Through the whole 12 weeks I felt the nightmares and the fear start to go away. I loved the horses just as much as I loved the people. I can't wait to get back to the horses next time!",
+    },
+    {
+      name: "Chris",
+      text: "Everyone came in with different comfort levels and different knowledge, and I was able to engage at my own pace with encouragement from the Posse and the other veterans. The Posse members always met us where we were and took the time to answer questions.",
+    }
+  ];
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+
   return (
     <div id="top" className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
       {/* Sticky Header */}
@@ -50,16 +86,12 @@ export default function App() {
         {/* Cohort Image */}
         <section className="max-w-6xl mx-auto px-6 mb-24">
           <div className="relative aspect-[21/9] bg-[#1a2e1a]/10 rounded-2xl overflow-hidden border border-[#1a2e1a]/10 shadow-2xl">
-            <img 
-              src="/cohort-one.jpg" 
-              alt="First cohort of Veterans" 
-              className="w-full h-full object-cover"
-            />
+            <img src="/cohort-one.jpg" alt="First cohort of Veterans" className="w-full h-full object-cover" />
           </div>
           <p className="mt-4 text-center text-sm italic opacity-60">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</p>
         </section>
 
-        {/* About Us RESTORED */}
+        {/* About Us */}
         <section id="about" className="py-24 px-6 bg-white/50 border-y border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto space-y-12 text-center">
             <h3 className="font-serif text-4xl italic">About Us</h3>
@@ -69,7 +101,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Our Approach RESTORED */}
+        {/* Our Approach */}
         <section id="approach" className="py-24 px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div className="bg-[#1a2e1a] text-[#FDFCF8] p-12 rounded-2xl shadow-xl">
@@ -107,7 +139,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Program RESTORED */}
+        {/* Program Section */}
         <section id="program" className="py-24 px-6 bg-[#1a2e1a]/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -125,25 +157,55 @@ export default function App() {
                 <h4 className="font-serif text-2xl mb-4">Regional Reach</h4>
                 <p className="opacity-80">Serving the Veteran communities of Coos County and Western Douglas County, Oregon.</p>
               </div>
-              <a 
-                href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl hover:scale-[1.02] transition-transform group cursor-pointer"
-              >
+              <a href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" target="_blank" rel="noopener noreferrer" className="p-8 bg-[#1a2e1a] text-[#FDFCF8] rounded-xl shadow-xl hover:scale-[1.02] transition-transform group cursor-pointer">
                 <BookOpen className="mb-4 group-hover:text-white/80 transition-colors" />
                 <h4 className="font-serif text-2xl mb-4">The Publication</h4>
-                <p className="text-sm opacity-80 leading-relaxed">
-                  100% of all proceeds fund our wellness sessions, ensuring Veterans participate at no cost.
-                </p>
+                <p className="text-sm opacity-80 leading-relaxed">100% of all proceeds fund our wellness sessions, ensuring Veterans participate at no cost.</p>
                 <p className="mt-6 text-xs font-bold uppercase tracking-widest border-b border-white/30 inline-block pb-1">Read the Story</p>
               </a>
             </div>
           </div>
         </section>
 
+        {/* Testimonial Carousel Section */}
+        <section className="py-24 px-6 bg-white overflow-hidden">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-4xl mb-4 italic">Beyond the Arena</h2>
+              <p className="uppercase tracking-[0.2em] text-xs font-bold opacity-50">Reflections from the 2025 Inaugural Cohort</p>
+            </div>
+            
+            <div className="relative bg-[#FDFCF8] border border-[#1a2e1a]/5 rounded-3xl p-8 md:p-16 shadow-sm min-h-[400px] flex flex-col justify-center">
+              <Quote className="absolute top-8 left-8 opacity-5 text-[#1a2e1a]" size={80} />
+              
+              <div className="relative z-10 text-center px-4 md:px-12 transition-all duration-500">
+                <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]/90">
+                  "{testimonials[currentSlide].text}"
+                </p>
+                <div className="h-px w-12 bg-[#1a2e1a]/20 mx-auto mb-6"></div>
+                <h4 className="font-bold uppercase tracking-widest text-sm">— {testimonials[currentSlide].name}, Cohort 2025</h4>
+              </div>
+
+              {/* Navigation Controls */}
+              <div className="absolute inset-y-0 left-0 flex items-center">
+                <button onClick={prevSlide} className="p-4 hover:opacity-50 transition-opacity"><ChevronLeft size={32} /></button>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center">
+                <button onClick={nextSlide} className="p-4 hover:opacity-50 transition-opacity"><ChevronRight size={32} /></button>
+              </div>
+
+              {/* Dot Indicators */}
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+                {testimonials.map((_, idx) => (
+                  <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-1.5 h-1.5 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/20'}`} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Volunteer Section */}
-        <section id="volunteer" className="py-24 px-6 bg-white">
+        <section id="volunteer" className="py-24 px-6 bg-white border-t border-[#1a2e1a]/5">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
@@ -152,62 +214,28 @@ export default function App() {
                   We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. While all help is welcome, we prioritize:
                 </p>
                 <ul className="space-y-4 mb-8">
-                  <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span><strong>Veterans</strong> (Previous Cohort participants preferred)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span>Individuals with a <strong>horse suitable for the program</strong> (Subject to evaluation by the Posse)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span>Individuals with <strong>horse handling experience</strong></span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span>Community members for logistics and outreach</span>
-                  </li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" /><span><strong>Veterans</strong> (Previous Cohort participants preferred)</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" /><span>Individuals with a <strong>horse suitable for the program</strong> (Subject to evaluation by the Posse)</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" /><span>Individuals with <strong>horse handling experience</strong></span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" /><span>Community members for logistics and outreach</span></li>
                 </ul>
               </div>
 
-              {/* Formspree Form */}
               <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-[#FDFCF8] p-8 rounded-xl border border-[#1a2e1a]/10 shadow-sm">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Full Name</label>
-                  <input type="text" name="name" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
-                </div>
+                <div><label className="block text-xs font-bold uppercase tracking-widest mb-2">Full Name</label><input type="text" name="name" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded" /></div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Email</label>
-                    <input type="email" name="email" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Phone Number</label>
-                    <input type="tel" name="phone" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
-                  </div>
+                  <div><label className="block text-xs font-bold uppercase tracking-widest mb-2">Email</label><input type="email" name="email" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded" /></div>
+                  <div><label className="block text-xs font-bold uppercase tracking-widest mb-2">Phone</label><input type="tel" name="phone" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded" /></div>
                 </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Veteran Status</label>
-                  <select name="veteran_status" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]">
-                    <option value="no">Non-Veteran</option>
-                    <option value="yes">Veteran</option>
-                    <option value="previous-cohort">Previous Cohort Participant</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Experience & Suitability</label>
-                  <textarea name="experience" placeholder="Describe your horse handling experience or horse suitability..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
-                  <Send size={16} /> Send Inquiry
-                </button>
+                <div><label className="block text-xs font-bold uppercase tracking-widest mb-2">Veteran Status</label><select name="veteran_status" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded"><option value="no">Non-Veteran</option><option value="yes">Veteran</option><option value="previous-cohort">Previous Cohort Participant</option></select></div>
+                <div><label className="block text-xs font-bold uppercase tracking-widest mb-2">Experience</label><textarea name="experience" placeholder="Describe your experience..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24"></textarea></div>
+                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"><Send size={16} /> Send Inquiry</button>
               </form>
             </div>
           </div>
         </section>
 
-        {/* Community & Partners RESTORED Wording */}
+        {/* Community & Partners */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic">A Community Coalition</h2>
@@ -231,16 +259,16 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact/Footer RESTORED */}
+        {/* Footer */}
         <footer id="contact" className="py-20 px-6 border-t border-[#1a2e1a]/10 bg-[#FDFCF8]">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
-              <h3 className="font-serif text-2xl mb-4">HORSES FOR HEROES UNITED</h3>
-              <p className="max-w-xs opacity-70">Improving the quality of life for Veterans across Coos and Western Douglas County, Oregon.</p>
+              <h3 className="font-serif text-2xl mb-4 uppercase">Horses for Heroes United</h3>
+              <p className="max-w-xs opacity-70 text-sm">Improving the quality of life for Veterans across Coos and Western Douglas County, Oregon.</p>
             </div>
             <div>
               <p className="font-bold uppercase tracking-widest text-xs mb-4">Location</p>
-              <p className="opacity-80">North Bend, Oregon</p>
+              <p className="opacity-80 text-sm">North Bend, Oregon</p>
             </div>
           </div>
           <div className="max-w-7xl mx-auto text-center mt-16 pt-8 border-t border-[#1a2e1a]/5">
