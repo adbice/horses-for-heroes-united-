@@ -75,64 +75,12 @@ export default function App() {
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <h2 className="font-serif text-4xl mb-6 italic">Join the Coalition</h2>
+                <p className="text-lg opacity-80 mb-8">
+                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. While all help is welcome, we prioritize:
+                </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
                     <span><strong>Veterans</strong> (Previous Cohort participants preferred)</span>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
-                    <span>Individuals with a <strong>horse suitable for the program</strong> (Subject to evaluation by the Posse)</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Formspree Form */}
-              <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-[#FDFCF8] p-8 rounded-xl border border-[#1a2e1a]/10 shadow-sm">
-                <input type="text" name="name" placeholder="Full Name" required className="w-full p-3 border rounded" />
-                <div className="grid grid-cols-2 gap-4">
-                  <input type="email" name="email" placeholder="Email" required className="w-full p-3 border rounded" />
-                  <input type="tel" name="phone" placeholder="Phone Number" required className="w-full p-3 border rounded" />
-                </div>
-                <select name="veteran_status" className="w-full p-3 border rounded">
-                  <option value="no">Non-Veteran</option>
-                  <option value="yes">Veteran</option>
-                  <option value="previous-cohort">Previous Cohort Participant</option>
-                </select>
-                <textarea name="experience" placeholder="Describe your horse handling experience..." className="w-full p-3 border rounded h-24"></textarea>
-                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                  <Send size={16} /> Send Inquiry
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
-
-        {/* Community & Partners */}
-        <section id="partners" className="py-24 px-6 bg-[#FDFCF8]">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-4xl mb-8 italic">A Community Coalition</h2>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-16">
-              <div className="flex flex-col items-center gap-4">
-                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse" className="h-32 md:h-44 w-auto object-contain" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Operational Host</span>
-              </div>
-              <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block"></div>
-              <div className="flex flex-col items-center gap-4">
-                <img src="/valogo.svg" alt="North Bend VA" className="h-32 md:h-44 w-auto object-contain" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer id="contact" className="py-20 px-6 border-t border-[#1a2e1a]/10">
-          <div className="max-w-7xl mx-auto text-center">
-             <p className="text-[10px] uppercase tracking-widest opacity-30">© 2026 HORSES FOR HEROES UNITED. ALL RIGHTS RESERVED.</p>
-          </div>
-        </footer>
-      </main>
-    </div>
-  );
-}
+                  <li className="flex items-center gap-
