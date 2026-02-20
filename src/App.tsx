@@ -209,7 +209,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Updated "Join the Coalition" Section with Donations & Form Fixes */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -224,11 +223,10 @@ export default function App() {
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous participants encouraged)</span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>program-suitable horse</strong></span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Donations</strong> and Community Resource Support</span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with equine experience/span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with <strong>equine experience</strong></span></li>
                 </ul>
               </div>
 
-              {/* Form Fix: Veteran Status + Mandatory Fields */}
               <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-white p-8 rounded-xl border border-[#1a2e1a]/10 shadow-lg">
                 <div>
                   <label htmlFor="full-name" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Full Name *</label>
