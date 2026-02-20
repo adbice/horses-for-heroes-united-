@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div id="top" className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
-      {/* Accessibility: Skip to Content */}
+      {/* Skip to Content */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#1a2e1a] text-white p-4 rounded-md z-[100]">
         Skip to main content
       </a>
@@ -150,7 +150,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Testimonial Carousel - ACCESSIBILITY UPDATED */}
+        {/* Testimonial Carousel */}
         <section className="py-24 px-6 bg-white overflow-hidden" aria-labelledby="testimonial-heading">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -171,7 +171,6 @@ export default function App() {
                 </article>
               </div>
 
-              {/* Navigation */}
               <div className="absolute inset-y-0 left-0 flex items-center">
                 <button onClick={prevSlide} aria-label="Previous Testimonial" className="p-4 hover:bg-[#1a2e1a]/5 transition-colors focus:ring-2 focus:ring-[#1a2e1a] rounded-full">
                   <ChevronLeft size={32} />
@@ -183,7 +182,6 @@ export default function App() {
                 </button>
               </div>
 
-              {/* Dot Indicators */}
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Slide selection">
                 {testimonials.map((_, idx) => (
                   <button 
@@ -200,7 +198,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Volunteer Section - ACCESSIBILITY UPDATED FORM */}
+        {/* Volunteer Section */}
         <section id="volunteer" className="py-24 px-6 bg-white border-t border-[#1a2e1a]/5">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -257,7 +255,7 @@ export default function App() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic">A Community Coalition</h2>
             <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90">
-              We operate through radical collaboration. Strengthened by the <strong>North Bend VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
+              We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-16">
               <div className="flex flex-col items-center gap-4">
@@ -266,9 +264,11 @@ export default function App() {
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block" aria-hidden="true"></div>
               <div className="flex flex-col items-center gap-4">
-                <img src="/valogo.svg" alt="North Bend VA logo" className="h-32 md:h-44 w-auto object-contain" />
-                <div className="flex flex-col items-center">
-                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1">North Bend VA</span>
+                <img src="/valogo.svg" alt="U.S. Department of Veterans Affairs logo" className="h-32 md:h-44 w-auto object-contain" />
+                <div className="flex flex-col items-center max-w-[320px]">
+                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight">
+                    North Bend VA Suicide Prevention Community Engagement Coordinator, Roseburg VA
+                  </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-60">Community Partner</span>
                 </div>
               </div>
