@@ -73,22 +73,22 @@ export default function App() {
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* Option 2: Mission Statement with Framed Flag Accent */}
+        {/* Updated Mission Section: Framed US Flag Accent (Option 2) */}
         <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            {/* Flag Image Column - Fixed Rendering */}
+            {/* Flag Image Column - Points to your local us-flag.jpeg */}
             <div className="md:col-span-5 order-2 md:order-1">
-              <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+              <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-white/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1523365280197-f1783db9fe62?auto=format&fit=crop&q=80&w=1000" 
+                  src="/us-flag.jpeg" 
                   alt="U.S. Flag waving against a bright blue sky" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/60 to-transparent"></div>
               </div>
             </div>
 
-            {/* Content Column */}
+            {/* Mission Text Column */}
             <div className="md:col-span-7 order-1 md:order-2 space-y-8">
               <div className="space-y-4">
                 <h3 className="font-serif text-2xl uppercase tracking-[0.3em] opacity-60">Our Mission</h3>
@@ -211,7 +211,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Volunteer Section - Restored CONTENT */}
+        {/* Volunteer Section - Verified with Riley Arena & Community Members */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -240,7 +240,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Community & Partners - Updated VA Title */}
+        {/* Community & Partners - Featuring Roseburg VA Community Partner */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
