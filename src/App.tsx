@@ -73,16 +73,16 @@ export default function App() {
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* Option 2: Mission Statement with Inset Flag Accent */}
+        {/* Option 2: Mission Statement with Framed Flag Accent */}
         <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            {/* Flag Image Column */}
+            {/* Flag Image Column - Fixed Rendering */}
             <div className="md:col-span-5 order-2 md:order-1">
-              <div className="relative aspect-video md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group">
+              <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1506015335073-b3914b71cb9d?q=80&w=2000&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1523365280197-f1783db9fe62?auto=format&fit=crop&q=80&w=1000" 
                   alt="U.S. Flag waving against a bright blue sky" 
-                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/40 to-transparent"></div>
               </div>
@@ -211,7 +211,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Volunteer Section */}
+        {/* Volunteer Section - Restored CONTENT */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -240,7 +240,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Community & Partners */}
+        {/* Community & Partners - Updated VA Title */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
@@ -250,7 +250,7 @@ export default function App() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-16">
               <div className="flex flex-col items-center gap-4">
                 <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse logo" className="h-32 md:h-44 w-auto object-contain" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50">Operational Host</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 text-[#1a2e1a]">Operational Host</span>
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block" aria-hidden="true"></div>
               <div className="flex flex-col items-center gap-4">
