@@ -3,11 +3,13 @@ import { BookOpen, Shield, Heart, Calendar, MapPin, Users, Send } from 'lucide-r
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
+    <div id="top" className="min-h-screen bg-[#FDFCF8] font-sans text-[#1a2e1a]">
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 w-full bg-[#FDFCF8]/90 backdrop-blur-sm border-b border-[#1a2e1a]/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <h1 className="font-serif text-xl font-bold tracking-tight uppercase">Horses for Heroes United</h1>
+          <a href="#top" className="hover:opacity-70 transition-opacity cursor-pointer">
+            <h1 className="font-serif text-xl font-bold tracking-tight uppercase">Horses for Heroes United</h1>
+          </a>
           <nav className="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest">
             <a href="#about" className="hover:opacity-60 transition-opacity">About Us</a>
             <a href="#approach" className="hover:opacity-60 transition-opacity">Our Approach</a>
@@ -247,7 +249,7 @@ export default function App() {
               </div>
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block"></div>
               <div className="flex flex-col items-center gap-4">
-                 <div className="h-32 md:h-44 flex items-center justify-center italic text-[#1a2e1a]/40 font-serif text-2xl">North Bend VA</div>
+                 <div className="h-32 md:h-44 flex items-center justify-center italic text-[#1a2e1a]/40 font-serif text-2xl uppercase tracking-tighter">North Bend VA</div>
                  <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
               </div>
             </div>
