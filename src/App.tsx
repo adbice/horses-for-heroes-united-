@@ -73,21 +73,40 @@ export default function App() {
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* Mission Statement Section */}
-        <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8] overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center space-y-10">
-            <h3 className="font-serif text-2xl uppercase tracking-[0.3em] opacity-60">Our Mission</h3>
-            <p className="text-3xl md:text-5xl font-serif leading-tight italic">
-              "To improve the emotional well-being and quality of life for Veterans through intentional equine partnerships and community-based coalitions."
-            </p>
-            <div className="pt-10 border-t border-white/20">
-              <p className="text-xl md:text-2xl font-light tracking-wide">
-                We are <span className="font-bold border-b-2 border-white/40 pb-1">built by the community, for our heroes.</span>
+        {/* Option 2: Mission Statement with Inset Flag Accent */}
+        <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            {/* Flag Image Column */}
+            <div className="md:col-span-5 order-2 md:order-1">
+              <div className="relative aspect-video md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/10 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1506015335073-b3914b71cb9d?q=80&w=2000&auto=format&fit=crop" 
+                  alt="U.S. Flag waving against a bright blue sky" 
+                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/40 to-transparent"></div>
+              </div>
+            </div>
+
+            {/* Content Column */}
+            <div className="md:col-span-7 order-1 md:order-2 space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-serif text-2xl uppercase tracking-[0.3em] opacity-60">Our Mission</h3>
+                <p className="text-3xl md:text-5xl font-serif leading-tight italic">
+                  "To improve the emotional well-being and quality of life for Veterans through intentional equine partnerships and community-based coalitions."
+                </p>
+              </div>
+              
+              <div className="pt-8 border-t border-white/20">
+                <p className="text-xl md:text-2xl font-light tracking-wide">
+                  We are <span className="font-bold border-b-2 border-white/40 pb-1">built by the community, for our heroes.</span>
+                </p>
+              </div>
+
+              <p className="text-lg opacity-80 leading-relaxed">
+                We provide a safe environment to reconnect with oneself and a community that understands the journey. We exist because too many Veterans continue to carry the invisible impacts of service.
               </p>
             </div>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto leading-relaxed pt-6">
-              We provide a safe environment to reconnect with oneself and a community that understands the journey. We exist because too many Veterans continue to carry the invisible impacts of service.
-            </p>
           </div>
         </section>
 
@@ -192,7 +211,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Restore Volunteer Section with Riley Arena & Full Requirements */}
+        {/* Volunteer Section */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -221,11 +240,11 @@ export default function App() {
           </div>
         </section>
 
-        {/* Community & Partners with updated VA Title */}
+        {/* Community & Partners */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
-            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light">
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light text-center">
               We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>, we are built by the community, for our heroes.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-16">
