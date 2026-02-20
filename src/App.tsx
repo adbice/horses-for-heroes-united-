@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Shield, Heart, Calendar, MapPin, Users } from 'lucide-react';
+import { BookOpen, Shield, Heart, Calendar, MapPin, Users, Send } from 'lucide-react';
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
             <a href="#about" className="hover:opacity-60 transition-opacity">About Us</a>
             <a href="#approach" className="hover:opacity-60 transition-opacity">Our Approach</a>
             <a href="#program" className="hover:opacity-60 transition-opacity">Program</a>
-            <a href="#partners" className="hover:opacity-60 transition-opacity">Partners</a>
+            <a href="#volunteer" className="hover:opacity-60 transition-opacity">Volunteer</a>
             <a href="#contact" className="hover:opacity-60 transition-opacity border-b border-[#1a2e1a]">Contact</a>
           </nav>
         </div>
@@ -122,7 +122,6 @@ export default function App() {
                 <p className="opacity-80">Serving the Veteran communities of Coos County and Western Douglas County, Oregon.</p>
               </div>
               
-              {/* Clickable Publication Card */}
               <a 
                 href="https://andrewdbicebooks.com/books/horses-for-heroes-united-andrew-d-bice/B0GK973S1Z" 
                 target="_blank" 
@@ -143,8 +142,72 @@ export default function App() {
           </div>
         </section>
 
+        {/* Volunteer Section */}
+        <section id="volunteer" className="py-24 px-6 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <h2 className="font-serif text-4xl mb-6 italic">Join the Coalition</h2>
+                <p className="text-lg opacity-80 mb-8">
+                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. 
+                  While all help is welcome, we prioritize:
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
+                    <span><strong>Veterans</strong> looking to mentor peers</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
+                    <span>Individuals with <strong>Horse Handling Experience</strong></span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" />
+                    <span>Community members for logistics and outreach</span>
+                  </li>
+                </ul>
+                <p className="text-sm italic opacity-60">
+                  Note: Sessions primarily run during our July–August Summer Schedule.
+                </p>
+              </div>
+
+              {/* Formspree Form */}
+              <form 
+                action="https://formspree.io/f/mwvnnbro" 
+                method="POST" 
+                className="space-y-4 bg-[#FDFCF8] p-8 rounded-xl border border-[#1a2e1a]/10 shadow-sm"
+              >
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Full Name</label>
+                  <input type="text" name="name" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Email</label>
+                    <input type="email" name="email" required className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest mb-2">Veteran Status</label>
+                    <select name="veteran_status" className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded focus:outline-none focus:border-[#1a2e1a]">
+                      <option value="no">Non-Veteran</option>
+                      <option value="yes">Veteran</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-widest mb-2">Equine Experience</label>
+                  <textarea name="experience" placeholder="Briefly describe your comfort level with horses..." className="w-full bg-white border border-[#1a2e1a]/20 p-3 rounded h-24 focus:outline-none focus:border-[#1a2e1a]"></textarea>
+                </div>
+                <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                  <Send size={16} /> Send Inquiry
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
         {/* Community & Partners */}
-        <section id="partners" className="py-24 px-6">
+        <section id="partners" className="py-24 px-6 bg-[#FDFCF8]">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="font-serif text-4xl italic">A Community Coalition</h2>
             <p className="text-xl leading-relaxed">
@@ -162,7 +225,7 @@ export default function App() {
             </div>
             <div className="space-y-4">
               <p className="font-bold uppercase tracking-widest text-xs">Engagement</p>
-              <p className="opacity-80">Volunteer Opportunities (Coming Soon)</p>
+              <a href="#volunteer" className="block opacity-80 hover:underline">Volunteer Opportunities</a>
             </div>
             <div>
               <p className="font-bold uppercase tracking-widest text-xs mb-2">Regional Hub</p>
