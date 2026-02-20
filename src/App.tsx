@@ -27,8 +27,7 @@ export default function App() {
               <span className="italic">Intentional Partnership.</span>
             </h2>
             <p className="text-lg md:text-xl mb-10 text-[#1a2e1a]/80 max-w-3xl mx-auto leading-relaxed">
-              A community-based coalition improving the emotional well-being and quality of life for Veterans across 
-              <strong> Coos County</strong> and <strong>Western Douglas County</strong>.
+              A community-based coalition improving the emotional well-being and quality of life for Veterans across <strong>Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
             </p>
           </div>
         </section>
