@@ -39,14 +39,13 @@ export default function App() {
               <a href="#volunteer" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
               <a href="#contact" className="hover:opacity-60 border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
             </nav>
-
-            {/* Header Facebook Link Added Here */}
+            
             <a 
               href={FB_URL} 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Follow us on Facebook"
-              className="p-2 bg-[#1a2e1a] text-white rounded-full hover:bg-[#1a2e1a]/80 transition-colors flex items-center justify-center"
+              className="p-2 bg-[#1a2e1a] text-white rounded-full hover:bg-[#1a2e1a]/80 transition-colors flex items-center justify-center shadow-lg"
             >
               <Facebook size={18} />
             </a>
@@ -188,7 +187,7 @@ export default function App() {
               <Quote className="absolute top-8 left-8 opacity-5 text-[#1a2e1a]" size={80} aria-hidden="true" />
               <div className="relative z-10 text-center px-4 md:px-12 transition-all duration-500" aria-live="polite" aria-atomic="true">
                 <article>
-                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]">"{testimonials[currentSlide].text}"</p>
+                  <p className="text-xl md:text-2xl font-serif leading-relaxed mb-8 italic text-[#1a2e1a]">" {testimonials[currentSlide].text} "</p>
                   <div className="h-px w-12 bg-[#1a2e1a]/20 mx-auto mb-6" aria-hidden="true"></div>
                   <footer className="font-bold uppercase tracking-widest text-xs text-[#1a2e1a]">{"— " + testimonials[currentSlide].name + ", Cohort 2025"}</footer>
                 </article>
@@ -204,35 +203,58 @@ export default function App() {
                 </button>
               </div>
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Slide selection">
-                {testimonials.map((_, idx) => (
-                  <button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />
-                ))}
+                {testimonials.map((_, idx) => (<button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />))}
               </div>
             </div>
           </div>
         </section>
 
+        {/* Updated "Join the Coalition" Section with Donations & Form Fixes */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <h2 className="font-serif text-4xl mb-6 italic text-[#1a2e1a]">Join the Coalition</h2>
-                <p className="text-lg opacity-80 mb-8 font-serif italic text-[#1a2e1a]">"Help us build the next cohort."</p>
-                <p className="text-[#1a2e1a]/80 mb-6">We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>.</p>
+                <p className="text-lg opacity-80 mb-6 font-serif italic text-[#1a2e1a]">"Help us build the next cohort."</p>
+                <p className="text-[#1a2e1a]/80 mb-6">
+                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. We also welcome <strong>tax-deductible donations</strong> and resource support to keep our program free for all Veterans. 
+                </p>
+                <p className="mb-8 font-bold text-[#1a2e1a]">Please fill out the form below to connect with us.</p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Veterans</strong> (Previous participants encouraged)</span></li>
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with a <strong>program-suitable horse</strong></span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with <strong>horse handling experience</strong></span></li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Community members</strong> for logistics and outreach</span></li>
+                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span><strong>Donations</strong> and Community Resource Support</span></li>
                 </ul>
               </div>
+
+              {/* Form Fix: Veteran Status + Mandatory Fields */}
               <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-white p-8 rounded-xl border border-[#1a2e1a]/10 shadow-lg">
-                <div><label htmlFor="full-name" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Full Name</label><input id="full-name" type="text" name="name" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" /></div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div><label htmlFor="email-address" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Email</label><input id="email-address" type="email" name="email" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" /></div>
-                  <div><label htmlFor="phone-number" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Phone</label><input id="phone-number" type="tel" name="phone" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" /></div>
+                <div>
+                  <label htmlFor="full-name" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Full Name *</label>
+                  <input id="full-name" type="text" name="name" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" />
                 </div>
-                <div><label htmlFor="exp-notes" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Experience</label><textarea id="exp-notes" name="experience" placeholder="How can you help?" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]"></textarea></div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email-address" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Email *</label>
+                    <input id="email-address" type="email" name="email" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone-number" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Phone *</label>
+                    <input id="phone-number" type="tel" name="phone" required className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="vet-status" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Veteran Status</label>
+                  <select id="vet-status" name="veteran-status" className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]">
+                    <option value="veteran">Veteran</option>
+                    <option value="non-veteran">Community Supporter / Non-Vet</option>
+                    <option value="previous-participant">Previous Cohort Participant</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="exp-notes" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Interest / Experience</label>
+                  <textarea id="exp-notes" name="experience" placeholder="Tell us how you'd like to help..." className="w-full bg-[#FDFCF8] border border-[#1a2e1a]/10 p-3 rounded h-24 focus:ring-2 focus:ring-[#1a2e1a] text-[#1a2e1a]"></textarea>
+                </div>
                 <button type="submit" className="w-full bg-[#1a2e1a] text-white py-4 rounded font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity focus:ring-4 focus:ring-[#1a2e1a]/40"><Send size={16} aria-hidden="true" /> Submit Application</button>
               </form>
             </div>
@@ -265,27 +287,15 @@ export default function App() {
             <div>
               <h3 className="font-serif text-2xl mb-4 uppercase tracking-tighter text-[#1a2e1a]">Horses for Heroes United</h3>
               <p className="max-w-xs text-[#1a2e1a]/60 text-sm italic mb-6">"Built by the community, for our heroes."</p>
-              
-              {/* Bold Footer Facebook Link */}
-              <a 
-                href={FB_URL} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1a2e1a] border-b-2 border-[#1a2e1a] pb-1 inline-block hover:opacity-50 transition-all"
-              >
-                <Facebook size={20} className="fill-[#1a2e1a]" /> FOLLOW OUR JOURNEY
-              </a>
+              <a href={FB_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1a2e1a] border-b-2 border-[#1a2e1a] pb-1 inline-block hover:opacity-50 transition-all" > <Facebook size={20} className="fill-[#1a2e1a]" /> FOLLOW OUR JOURNEY </a>
             </div>
-            
             <div className="text-center md:text-left">
               <p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50 text-[#1a2e1a]">Non-Profit Information</p>
               <div className="text-[#1a2e1a] text-sm font-serif leading-relaxed">
                 <p className="font-bold">Coos County Mounted Sheriffs Posse</p>
-                <p>501(c)(3) Non-Profit</p>
-                <p>Tax ID: 93-0966073</p>
+                <p>501(c)(3) Non-Profit | Tax ID: 93-0966073</p>
               </div>
             </div>
-
             <div>
               <p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50 text-[#1a2e1a]">Location</p>
               <p className="text-[#1a2e1a] text-sm font-serif font-bold">North Bend, Oregon</p>
