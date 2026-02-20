@@ -73,14 +73,14 @@ export default function App() {
           <figcaption className="mt-4 text-center text-sm italic text-[#1a2e1a]/70">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</figcaption>
         </section>
 
-        {/* Updated Mission Section: Framed US Flag Accent (Option 2) */}
+        {/* Mission Statement Section: Side-by-Side Flag Accent */}
         <section id="about" className="py-24 px-6 bg-[#1a2e1a] text-[#FDFCF8]">
           <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            {/* Flag Image Column - Points to your local us-flag.jpeg */}
+            {/* Flag Image Column - Matches us-flag.jpg in your public folder */}
             <div className="md:col-span-5 order-2 md:order-1">
               <div className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-white/20 bg-white/5">
                 <img 
-                  src="/us-flag.jpeg" 
+                  src="/us-flag.jpg" 
                   alt="U.S. Flag waving against a bright blue sky" 
                   className="w-full h-full object-cover"
                 />
@@ -211,7 +211,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Volunteer Section - Verified with Riley Arena & Community Members */}
+        {/* Volunteer Section */}
         <section id="volunteer" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16">
@@ -240,7 +240,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Community & Partners - Featuring Roseburg VA Community Partner */}
+        {/* Community & Partners */}
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
