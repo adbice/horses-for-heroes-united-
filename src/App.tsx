@@ -59,16 +59,6 @@ export default function App() {
           <p className="mt-4 text-center text-sm italic opacity-60">The inaugural 2025 cohort alongside the Coos County Mounted Sheriff’s Posse.</p>
         </section>
 
-        {/* About Us */}
-        <section id="about" className="py-24 px-6 bg-white/50 border-y border-[#1a2e1a]/5">
-          <div className="max-w-4xl mx-auto space-y-12 text-center">
-            <h3 className="font-serif text-4xl italic">About Us</h3>
-            <p className="text-xl leading-relaxed opacity-90">
-              We provide a safe, supportive environment where Veterans can reconnect with themselves and a community that understands their journey. Every Veteran participates at <strong>no cost</strong>.
-            </p>
-          </div>
-        </section>
-
         {/* Volunteer Section */}
         <section id="volunteer" className="py-24 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
@@ -146,7 +136,10 @@ export default function App() {
               <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block"></div>
               <div className="flex flex-col items-center gap-4">
                 <img src="/valogo.svg" alt="North Bend VA" className="h-32 md:h-44 w-auto object-contain" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
+                <div className="flex flex-col items-center">
+                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1">North Bend VA</span>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] opacity-50">Community Partner</span>
+                </div>
               </div>
             </div>
           </div>
