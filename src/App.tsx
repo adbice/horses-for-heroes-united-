@@ -30,7 +30,6 @@ export default function App() {
           <a href="#top" className="focus:outline-none focus:ring-2 focus:ring-[#1a2e1a] rounded">
             <h1 className="font-serif text-xl font-bold tracking-tight uppercase">Horses for Heroes United</h1>
           </a>
-          
           <div className="flex items-center gap-4 md:gap-8">
             <nav aria-label="Main Navigation" className="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest">
               <a href="#about" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">About Us</a>
@@ -39,14 +38,7 @@ export default function App() {
               <a href="#volunteer" className="hover:opacity-60 focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Volunteer</a>
               <a href="#contact" className="hover:opacity-60 border-b border-[#1a2e1a] focus:ring-2 focus:ring-[#1a2e1a] rounded px-1">Contact</a>
             </nav>
-            
-            <a 
-              href={FB_URL} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Follow us on Facebook"
-              className="p-2 bg-[#1a2e1a] text-white rounded-full hover:bg-[#1a2e1a]/80 transition-colors flex items-center justify-center shadow-lg"
-            >
+            <a href={FB_URL} target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="p-2 bg-[#1a2e1a] text-white rounded-full hover:bg-[#1a2e1a]/80 transition-colors flex items-center justify-center shadow-lg" >
               <Facebook size={18} />
             </a>
           </div>
@@ -57,12 +49,10 @@ export default function App() {
         <section className="relative pt-32 pb-8 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-[#1a2e1a]">
-              Healing Through <br />
-              <span className="italic" aria-hidden="true">Intentional Partnership.</span>
+              Healing Through <br /> <span className="italic" aria-hidden="true">Intentional Partnership.</span>
             </h2>
             <p className="text-lg md:text-xl mb-10 text-[#1a2e1a]/90 max-w-3xl mx-auto leading-relaxed">
-              A community-based coalition improving the emotional well-being and quality of life for Veterans across 
-              <strong> Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
+              A community-based coalition improving the emotional well-being and quality of life for Veterans across <strong>Coos County</strong> and <strong>Western Douglas County, Oregon</strong>.
             </p>
           </div>
         </section>
@@ -93,7 +83,6 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/60 to-transparent"></div>
               </div>
             </div>
-
             <div className="md:col-span-7 order-1 md:order-2 space-y-8">
               <div className="space-y-4">
                 <h3 className="font-serif text-2xl uppercase tracking-[0.3em] opacity-60">Our Mission</h3>
@@ -203,7 +192,9 @@ export default function App() {
                 </button>
               </div>
               <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Slide selection">
-                {testimonials.map((_, idx) => (<button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />))}
+                {testimonials.map((_, idx) => (
+                  <button key={idx} role="tab" aria-selected={currentSlide === idx} aria-label={`Go to testimonial ${idx + 1}`} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-[#1a2e1a] w-6' : 'bg-[#1a2e1a]/30'}`} />
+                ))}
               </div>
             </div>
           </div>
@@ -216,7 +207,7 @@ export default function App() {
                 <h2 className="font-serif text-4xl mb-6 italic text-[#1a2e1a]">Join the Coalition</h2>
                 <p className="text-lg opacity-80 mb-6 font-serif italic text-[#1a2e1a]">"Help us build the next cohort."</p>
                 <p className="text-[#1a2e1a]/80 mb-6">
-                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. We also welcome <strong>tax-deductible donations</strong> and resource support to keep our program free for all Veterans. 
+                  We are looking for dedicated individuals to support our sessions at <strong>Riley Arena</strong>. We also welcome <strong>tax-deductible donations</strong> and resource support to keep our program free for all Veterans.
                 </p>
                 <p className="mb-8 font-bold text-[#1a2e1a]">Please fill out the form below to connect with us.</p>
                 <ul className="space-y-4 mb-8">
@@ -226,7 +217,6 @@ export default function App() {
                   <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#1a2e1a] rounded-full" aria-hidden="true" /><span>Individuals with <strong>equine experience</strong></span></li>
                 </ul>
               </div>
-
               <form action="https://formspree.io/f/mwvnnbro" method="POST" className="space-y-4 bg-white p-8 rounded-xl border border-[#1a2e1a]/10 shadow-lg">
                 <div>
                   <label htmlFor="full-name" className="block text-[10px] font-bold uppercase tracking-widest mb-2 text-[#1a2e1a]">Full Name *</label>
@@ -263,19 +253,13 @@ export default function App() {
         <section id="partners" className="py-24 px-6 bg-[#FDFCF8] border-t border-[#1a2e1a]/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl mb-8 italic text-[#1a2e1a]">A Community Coalition</h2>
-            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light text-center"> We operate through radical collaboration. Strengthened by the <strong>VA</strong> and hosted through our vital partnership with the <strong>Coos County Mounted Sheriff’s Posse</strong>. </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-16">
+            <p className="text-xl leading-relaxed max-w-3xl mx-auto mb-16 text-[#1a2e1a]/90 font-light text-center">
+              Driven by the <strong>Coos County Mounted Sheriff’s Posse</strong> and powered by the community, this program thrives through radical collaboration. While the Posse leads and hosts the initiative, our impact is strengthened by the dedicated partnership of the <strong>VA</strong>.
+            </p>
+            <div className="flex justify-center">
               <div className="flex flex-col items-center gap-4">
-                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse" className="h-32 md:h-44 w-auto object-contain" />
+                <img src="/posse.jpeg" alt="Coos County Mounted Sheriff's Posse" className="h-40 md:h-56 w-auto object-contain" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 text-[#1a2e1a]">Operational Host</span>
-              </div>
-              <div className="h-16 w-px bg-[#1a2e1a]/10 hidden md:block" aria-hidden="true"></div>
-              <div className="flex flex-col items-center gap-4">
-                <img src="/valogo.svg" alt="VA" className="h-32 md:h-44 w-auto object-contain" />
-                <div className="flex flex-col items-center max-w-[320px]">
-                  <span className="text-sm font-serif font-bold italic text-[#1a2e1a] mb-1 leading-tight text-center">North Bend VA Community Engagement Coordinator, Roseburg VA</span>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 text-[#1a2e1a]">Community Partner</span>
-                </div>
               </div>
             </div>
           </div>
@@ -286,7 +270,9 @@ export default function App() {
             <div>
               <h3 className="font-serif text-2xl mb-4 uppercase tracking-tighter text-[#1a2e1a]">Horses for Heroes United</h3>
               <p className="max-w-xs text-[#1a2e1a]/60 text-sm italic mb-6">"Built by the community, for our heroes."</p>
-              <a href={FB_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1a2e1a] border-b-2 border-[#1a2e1a] pb-1 inline-block hover:opacity-50 transition-all" > <Facebook size={20} className="fill-[#1a2e1a]" /> FOLLOW OUR JOURNEY </a>
+              <a href={FB_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1a2e1a] border-b-2 border-[#1a2e1a] pb-1 inline-block hover:opacity-50 transition-all" >
+                <Facebook size={20} className="fill-[#1a2e1a]" /> FOLLOW OUR JOURNEY
+              </a>
             </div>
             <div className="text-center md:text-left">
               <p className="font-bold uppercase tracking-widest text-[10px] mb-4 opacity-50 text-[#1a2e1a]">Non-Profit Information</p>
@@ -301,7 +287,7 @@ export default function App() {
             </div>
           </div>
           <div className="max-w-7xl mx-auto text-center mt-16 pt-8 border-t border-[#1a2e1a]/5 text-[#1a2e1a]">
-             <p className="text-[10px] uppercase tracking-widest opacity-30 font-bold">© 2026 HORSES FOR HEROES UNITED. ALL RIGHTS RESERVED.</p>
+            <p className="text-[10px] uppercase tracking-widest opacity-30 font-bold">© 2026 HORSES FOR HEROES UNITED. ALL RIGHTS RESERVED.</p>
           </div>
         </footer>
       </main>
