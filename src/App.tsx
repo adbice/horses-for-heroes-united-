@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Shield, Heart, Calendar, MapPin, Users, Send, ChevronLeft, ChevronRight, Quote, Facebook } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -291,6 +292,7 @@ export default function App() {
           </div>
         </footer>
       </main>
+      <Analytics />
     </div>
   );
 }
